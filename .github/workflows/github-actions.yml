@@ -23,4 +23,3 @@ jobs:
 
       - name: Show triggering event
         run: echo "Event name: ${{ github.event_name }}"
-
