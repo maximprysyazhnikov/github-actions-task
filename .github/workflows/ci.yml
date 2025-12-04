@@ -5,6 +5,7 @@ on:
 
 env:
   GITHUB_ACTIONS: "custom-github-actions-env"
+  EVENT_NAME: ${{ github.event_name }}
 
 jobs:
   github-task-job:
@@ -22,4 +23,4 @@ jobs:
           echo "Ref name: ${{ github.ref_name }}"
 
       - name: Show triggering event
-        run: echo "Event name: ${{ github.event_name }}"
+        run: echo "Event name: ${EVENT_NAME}"
